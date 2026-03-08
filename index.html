@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xaenz Digital - Desarrollo Web Moderno</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <nav class="navbar">
+            <a href="index.html" class="logo">
+                <img src="marca.png" alt="Xaenz Digital">
+            </a>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="index.html" class="nav-link active">Inicio</a></li>
+                <li><a href="servicios.html" class="nav-link">Servicios</a></li>
+                <li><a href="portafolio.html" class="nav-link">Portafolio</a></li>
+                <li><a href="nosotros.html" class="nav-link">Sobre nosotros</a></li>
+                <li><a href="contacto.html" class="nav-link">Contacto</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="inicio">
+        <div class="hero-content">
+            <h1 class="hero-title">
+                <span class="line">Creamos páginas web</span>
+                <span class="line accent">modernas para tu negocio</span>
+            </h1>
+            <p class="hero-subtitle">Diseño, desarrollo y soluciones digitales para empresas y emprendimientos</p>
+            <div class="hero-buttons">
+                <a href="portafolio.html" class="btn btn-primary">Ver proyectos</a>
+                <a href="contacto.html" class="btn btn-secondary">Contáctanos</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Servicios Preview -->
+    <section class="services" id="servicios">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Servicios</span>
+                <h2 class="section-title"><span>¿Qué podemos hacer por ti?</span></h2>
+                <p class="section-subtitle">Ofrecemos soluciones digitales completas para tu negocio</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card glass-card" data-aos="fade-up">
+                    <div class="service-icon">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <h3>Diseño de páginas web</h3>
+                    <p>Creamos diseños únicos y personalizados que representan la esencia de tu marca.</p>
+                </div>
+                <div class="service-card glass-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                    <h3>Tiendas online</h3>
+                    <p>Desarrollamos tiendas virtuales completas con pasarelas de pago.</p>
+                </div>
+                <div class="service-card glass-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <h3>Páginas empresariales</h3>
+                    <p>Sitios web corporativos profesionales para tu empresa.</p>
+                </div>
+                <div class="service-card glass-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="service-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3>Optimización y mantenimiento</h3>
+                    <p>Mejoramos el rendimiento y seguridad de tu sitio web.</p>
+                </div>
+            </div>
+            <div class="section-cta">
+                <a href="servicios.html" class="btn btn-secondary">Ver todos los servicios</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portafolio Preview -->
+    <section class="portfolio" id="portafolio">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Portafolio</span>
+                <h2 class="section-title"><span>Proyectos realizados</span></h2>
+                <p class="section-subtitle">Estos son los proyectos que hemos completado</p>
+            </div>
+            <div class="portfolio-grid">
+                <div class="portfolio-card" data-aos="fade-up">
+                    <div class="portfolio-image">
+                        <img src="gnss.png" alt="Topografía GGSS">
+                        <div class="portfolio-overlay">
+                            <span>Ver proyecto</span>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Topografía GNSS</h3>
+                        <p>Página web para empresa de topografía</p>
+                        <a href="https://www-xaenz.github.io/GNSS/" class="btn-project">Ver proyecto <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="portfolio-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="portfolio-image">
+                        <img src="purebeauty.png" alt="PureBeauty" style="width: 100%; height: 100%; object-fit: cover;">
+                        <div class="portfolio-overlay">
+                            <span>Ver proyecto</span>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>PureBeauty</h3>
+                        <p>Sitio web para tienda de belleza</p>
+                        <a href="https://www-xaenz.github.io/PUREBEAUTY/" target="_blank" class="btn-project">Ver proyecto <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="section-cta">
+                <a href="portafolio.html" class="btn btn-secondary">Ver todo el portafolio</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre Nosotros Preview -->
+    <section class="about" id="nosotros">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <span class="section-tag">Sobre nosotros</span>
+                    <h2 class="section-title"><span>¿Quién es XaenzWeb?</span></h2>
+                    <p>Emprendimiento diseñado por <strong>Juan José Sáenz</strong>, dedicado a crear páginas web modernas y funcionales.</p>
+                    <p>Como <strong>emprendedor nuevo</strong>, dedico mi trabajo a crear páginas web modernas y funcionales que ayudan a negocios a crecer en el mundo digital.</p>
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">2</span>
+                            <span class="stat-label">Proyectos</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">2</span>
+                            <span class="stat-label">Clientes</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">100%</span>
+                            <span class="stat-label">Satisfacción</span>
+                        </div>
+                    </div>
+                </div>
+                <div style="text-align: center;">
+                    <a href="nosotros.html" class="btn btn-primary">Conoce más sobre nosotros</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacto CTA -->
+    <section class="contact" id="contacto">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Contacto</span>
+                <h2 class="section-title"><span>¿Tienes un proyecto en mente?</span></h2>
+                <p class="section-subtitle">Escríbenos y juntos crearemos la página web perfecta para tu negocio</p>
+            </div>
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <div class="contact-card">
+                        <i class="fab fa-whatsapp"></i>
+                        <div>
+                            <h3>WhatsApp</h3>
+                            <p>Escríbenos directamente</p>
+                            <a href="https://wa.me/573102145133" target="_blank" class="contact-link">310 214 5133</a>
+                        </div>
+                    </div>
+                    <div class="contact-card">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h3>Email</h3>
+                            <p>Envíanos un correo</p>
+                            <a href="mailto:juanjosesaenzmontoya@gmail.com" class="contact-link">juanjosesaenzmontoya@gmail.com</a>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form" id="contact-form" action="https://wa.me/573102145133" method="get" target="_blank">
+                    <h3>Envíanos un mensaje por WhatsApp</h3>
+                    <div class="form-group">
+                        <label for="name">Nombre</label>
+                        <input type="text" id="name" name="text" placeholder="Tu nombre" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Mensaje</label>
+                        <textarea id="message" name="text" rows="5" placeholder="Cuéntanos sobre tu proyecto..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-submit">
+                        <span>Enviar por WhatsApp</span>
+                        <i class="fab fa-whatsapp"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        <img src="marca.png" alt="Xaenz Digital">
+                    </a>
+                    <p>Creando experiencias digitales extraordinarias para tu negocio.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Enlaces</h4>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="servicios.html">Servicios</a></li>
+                        <li><a href="portafolio.html">Portafolio</a></li>
+                        <li><a href="nosotros.html">Sobre nosotros</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h4>Síguenos</h4>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/webxaenz27?igsh=am1wd3poMzBpY3Nm" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://github.com/WWW-XAENZ" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="contacto.html" aria-label="Contacto"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 XaenzWeb. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
