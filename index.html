@@ -258,23 +258,6 @@
     </footer>
 
     <script src="script.js"></script>
-    <script>
-        // Script específico para el formulario de contacto
-        document.getElementById('contact-form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            const name = document.getElementById('name').value;
-            const message = document.getElementById('message').value;
-            
-            // Construir el mensaje completo
-            const fullMessage = `Hola, soy ${name}. ${message}`;
-            
-            // Codificar para URL
-            const encodedMessage = encodeURIComponent(fullMessage);
-            
-            // Redirigir a WhatsApp
-            window.open(`https://wa.me/573102145133?text=${encodedMessage}`, '_blank');
-        });
-    </script>
+
 </body>
 </html>
