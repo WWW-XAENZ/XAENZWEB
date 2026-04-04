@@ -4,6 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Xaenz Digital - Desarrollo Web Moderno</title>
+    <meta name="description" content="Xaenz Digital - Creamos páginas web modernas, diseño profesional y soluciones digitales para tu negocio. Desarrollo web, tiendas online y más.">
+    <meta name="keywords" content="desarrollo web, diseño web, páginas web, tiendas online, desarrollo Colombia, Xaenz Digital">
+    <meta name="author" content="Juan José Sáenz - XaenzWeb">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Xaenz Digital - Desarrollo Web Moderno">
+    <meta property="og:description" content="Creamos páginas web modernas y funcionales para tu negocio">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
     <link rel="icon" type="image/png" href="marca.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -35,16 +43,55 @@
 
     <!-- Hero Section -->
     <section class="hero" id="inicio">
+        <!-- Floating Elements -->
+        <div class="floating-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+            <div class="shape shape-4"></div>
+        </div>
+        
         <div class="hero-content">
-            <h1 class="hero-title">
-                <span class="line">Creamos páginas web</span>
-                <span class="line accent">modernas para tu negocio</span>
-            </h1>
-            <p class="hero-subtitle">Diseño, desarrollo y soluciones digitales para empresas y emprendimientos</p>
-            <div class="hero-buttons">
-                <a href="portafolio.html" class="btn btn-primary">Ver proyectos</a>
-                <a href="contacto.html" class="btn btn-secondary">Contáctanos</a>
+            <div class="hero-badge">
+                <span class="badge-dot"></span>
+                <span>Disponible para nuevos proyectos</span>
             </div>
+            <h1 class="hero-title">
+                <span class="line">Creamos tecnología</span>
+                <span class="line accent">para hacer crecer tu negocio</span>
+            </h1>
+            <p class="hero-subtitle">Desarrollamos páginas web, sistemas de turnos, software a medida y soluciones digitales que transforman tu empresa</p>
+            <div class="hero-buttons">
+                <a href="portafolio.html" class="btn btn-primary">
+                    <span>Ver proyectos</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+                <a href="contacto.html" class="btn btn-secondary">
+                    <span>Contáctanos</span>
+                    <i class="fas fa-comments"></i>
+                </a>
+            </div>
+            
+            <!-- Trust Badges -->
+            <div class="trust-badges">
+                <div class="trust-badge">
+                    <i class="fas fa-rocket"></i>
+                    <span>Entrega rápida</span>
+                </div>
+                <div class="trust-badge">
+                    <i class="fas fa-shield-alt"></i>
+                    <span>Sitios seguros</span>
+                </div>
+                <div class="trust-badge">
+                    <i class="fas fa-mobile-alt"></i>
+                    <span>100% Responsive</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="scroll-indicator">
+            <span>Scroll</span>
+            <i class="fas fa-chevron-down"></i>
         </div>
     </section>
 
@@ -64,19 +111,26 @@
                     <h3>Diseño de páginas web</h3>
                     <p>Creamos diseños únicos y personalizados que representan la esencia de tu marca.</p>
                 </div>
+                <div class="service-card glass-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                    <h3>Tiendas online</h3>
+                    <p>Desarrollamos tiendas virtuales completas con pasarelas de pago.</p>
+                </div>
                 <div class="service-card glass-card" data-aos="fade-up" data-aos-delay="200">
                     <div class="service-icon">
-                        <i class="fas fa-building"></i>
+                        <i class="fas fa-desktop"></i>
                     </div>
-                    <h3>Páginas empresariales</h3>
-                    <p>Sitios web corporativos profesionales para tu empresa.</p>
+                    <h3>Sistemas de turnos</h3>
+                    <p>Software de gestión de citas y turnos para clínicas, salones, barberías y más.</p>
                 </div>
                 <div class="service-card glass-card" data-aos="fade-up" data-aos-delay="300">
                     <div class="service-icon">
-                        <i class="fas fa-tools"></i>
+                        <i class="fas fa-laptop-code"></i>
                     </div>
-                    <h3>Optimización y mantenimiento</h3>
-                    <p>Mejoramos el rendimiento y seguridad de tu sitio web.</p>
+                    <h3>Software a medida</h3>
+                    <p>Desarrollamos aplicaciones de escritorio y sistemas personalizados para tu negocio.</p>
                 </div>
             </div>
             <div class="section-cta">
@@ -89,58 +143,79 @@
 <section class="portfolio" id="portafolio">
     <div class="container">
         <div class="section-header">
-            <span class="section-tag">Portafolio</span>
-            <h2 class="section-title"><span>Proyectos realizados</span></h2>
-            <p class="section-subtitle">Estos son los proyectos que hemos completado</p>
+            <span class="section-tag">Proyectos</span>
+            <h2 class="section-title"><span>Lo que hemos creado</span></h2>
+            <p class="section-subtitle">Páginas web, sistemas y software desarrollados para nuestros clientes</p>
+        </div>
+        <div class="portfolio-filters">
+            <button class="filter-btn active" data-filter="all">Todos</button>
+            <button class="filter-btn" data-filter="web">Páginas Web</button>
+            <button class="filter-btn" data-filter="software">Software</button>
+            <button class="filter-btn" data-filter="tienda">Tiendas Online</button>
         </div>
         <div class="portfolio-grid">
             <!-- Tarjeta 1: GNSS -->
-            <div class="portfolio-card" data-aos="fade-up">
+            <div class="portfolio-card" data-aos="fade-up" data-category="web">
                 <div class="portfolio-image">
                     <img src="gnss.png" alt="Topografía GGSS">
                     <div class="portfolio-overlay">
-                        <span>Ver proyecto</span>
+                        <span class="project-type">Página Web</span>
                     </div>
                 </div>
                 <div class="portfolio-info">
                     <h3>Topografía GNSS</h3>
-                    <p>Página web para empresa de topografía</p>
-                    <a href="https://www-xaenz.github.io/GNSS/" target="_blank" class="btn-project">Ver proyecto <i class="fas fa-arrow-right"></i></a>
+                    <p>Página web corporativa para empresa de topografía y servicios geográficos</p>
+                    <a href="https://www-xaenz.github.io/GNSS/" target="_blank" class="btn-project">Ver proyecto <i class="fas fa-external-link-alt"></i></a>
                 </div>
             </div>
             
             <!-- Tarjeta 2: PureBeauty -->
-            <div class="portfolio-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="portfolio-card" data-aos="fade-up" data-aos-delay="100" data-category="tienda">
                 <div class="portfolio-image">
-                    <img src="purebeauty.png" alt="PureBeauty" style="width: 100%; height: 100%; object-fit: cover;">
+                    <img src="purebeauty.png" alt="PureBeauty">
                     <div class="portfolio-overlay">
-                        <span>Ver proyecto</span>
+                        <span class="project-type">Tienda Online</span>
                     </div>
                 </div>
                 <div class="portfolio-info">
                     <h3>PureBeauty</h3>
-                    <p>Sitio web para tienda de belleza</p>
-                    <a href="https://www-xaenz.github.io/PUREBEAUTY/" target="_blank" class="btn-project">Ver proyecto <i class="fas fa-arrow-right"></i></a>
+                    <p>Sitio web elegante para centro de belleza con servicios y precios</p>
+                    <a href="https://www-xaenz.github.io/PUREBEAUTY/" target="_blank" class="btn-project">Ver proyecto <i class="fas fa-external-link-alt"></i></a>
                 </div>
             </div>
             
-            <!-- Tarjeta 3: Ezentia (NUEVA) -->
-            <div class="portfolio-card" data-aos="fade-up" data-aos-delay="400">
+            <!-- Tarjeta 3: Ezentia -->
+            <div class="portfolio-card" data-aos="fade-up" data-aos-delay="200" data-category="tienda">
                 <div class="portfolio-image">
-                    <img src="ezentiaPagina.png" alt="Ezentia" style="width: 100%; height: 100%; object-fit: cover;">
+                    <img src="ezentiaPagina.png" alt="Ezentia">
                     <div class="portfolio-overlay">
-                        <span>Ver proyecto</span>
+                        <span class="project-type">Tienda Online</span>
                     </div>
                 </div>
                 <div class="portfolio-info">
                     <h3>Ezentia</h3>
-                    <p>Sitio web para tienda de perfumes exclusivos</p>
-                    <a href="https://www-xaenz.github.io/EZENTIA/" target="_blank" class="btn-project">Ver proyecto <i class="fas fa-arrow-right"></i></a>
+                    <p>Catálogo web para tienda de perfumes exclusivos y fragancias</p>
+                    <a href="https://www-xaenz.github.io/EZENTIA/" target="_blank" class="btn-project">Ver proyecto <i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+
+            <!-- Tarjeta 4: SI-3 Sistema de Turnos -->
+            <div class="portfolio-card" data-aos="fade-up" data-aos-delay="300" data-category="software">
+                <div class="portfolio-image">
+                    <img src="SI3.png" alt="SI-3 Sistema de Turnos">
+                    <div class="portfolio-overlay">
+                        <span class="project-type">Software</span>
+                    </div>
+                </div>
+                <div class="portfolio-info">
+                    <h3>SI-3 Sistema de Turnos</h3>
+                    <p>Sistema de gestión de citas y turnos para clínicas, barberías y salones. Incluye panel admin y visualización en pantalla.</p>
+                    <a href="https://www-xaenz.github.io/SI-3/" target="_blank" class="btn-project">Ver proyecto <i class="fas fa-external-link-alt"></i></a>
                 </div>
             </div>
         </div>
         <div class="section-cta">
-            <a href="portafolio.html" class="btn btn-secondary">Ver todo el portafolio</a>
+            <a href="portafolio.html" class="btn btn-secondary">Ver todos los proyectos</a>
         </div>
     </div>
 </section>
@@ -152,19 +227,19 @@
                 <div class="about-text">
                     <span class="section-tag">Sobre nosotros</span>
                     <h2 class="section-title"><span>¿Quién es XaenzWeb?</span></h2>
-                    <p>Emprendimiento diseñado por <strong>Juan José Sáenz</strong>, dedicado a crear páginas web modernas y funcionales.</p>
-                    <p>Como <strong>emprendedor nuevo</strong>, dedico mi trabajo a crear páginas web modernas y funcionales que ayudan a negocios a crecer en el mundo digital.</p>
+                    <p>Emprendimiento diseñado por <strong>Juan José Sáenz</strong>, dedicado a crear páginas web modernas, sistemas de turnos, software a medida y soluciones digitales para negocios.</p>
+                    <p>Como <strong>emprendedor</strong>, me dedico a crear soluciones tecnológicas que ayudan a negocios a crecer en el mundo digital.</p>
                     <div class="about-stats">
                         <div class="stat-item">
-                            <span class="stat-number">3</span>
+                            <span class="stat-number" data-count="4">0</span>
                             <span class="stat-label">Proyectos</span>
                         </div>
                         <div class="stat-item">
-                            <span class="stat-number">3</span>
+                            <span class="stat-number" data-count="4">0</span>
                             <span class="stat-label">Clientes</span>
                         </div>
                         <div class="stat-item">
-                            <span class="stat-number">100%</span>
+                            <span class="stat-number" data-count="100" data-suffix="%">0</span>
                             <span class="stat-label">Satisfacción</span>
                         </div>
                     </div>
@@ -176,13 +251,71 @@
         </div>
     </section>
 
+    <!-- FAQ Section -->
+    <section class="faq" id="faq">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Preguntas Frecuentes</span>
+                <h2 class="section-title"><span>¿Tienes dudas?</span></h2>
+                <p class="section-subtitle">Responderemos todas tus preguntas sobre nuestros servicios</p>
+            </div>
+            <div class="faq-grid">
+                <div class="faq-item" data-aos="fade-up">
+                    <div class="faq-question">
+                        <h3>¿Cuánto tiempo toma desarrollar una página web?</h3>
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>El tiempo de desarrollo depende de la complejidad del proyecto. Una página web básica puede estar lista en 5-7 días, mientras que proyectos más complejos como tiendas online pueden tomar 2-3 semanas. Siempre acordamos tiempos específicos antes de comenzar.</p>
+                    </div>
+                </div>
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="100">
+                    <div class="faq-question">
+                        <h3>¿El diseño es responsive (se adapta a móviles)?</h3>
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Sí, todos nuestros proyectos son 100% responsive. Tu sitio web se verá perfecto en computadoras, tablets y celulares. Además, optimizamos el rendimiento para cargas rápidas en cualquier dispositivo.</p>
+                    </div>
+                </div>
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="200">
+                    <div class="faq-question">
+                        <h3>¿Ofrecen mantenimiento después de entregado el proyecto?</h3>
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Sí, ofrecemos paquetes de mantenimiento que incluyen actualizaciones de contenido, copias de seguridad, mejoras de seguridad y soporte técnico. Contáctanos para conocer las opciones disponibles.</p>
+                    </div>
+                </div>
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="300">
+                    <div class="faq-question">
+                        <h3>¿Qué necesito para comenzar mi proyecto?</h3>
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Solo necesitas tu idea y contenido básico (textos, imágenes). Nosotros nos encargamos del diseño, desarrollo y publicación. Si no tienes contenido, podemos ayudarte a crearlo.</p>
+                    </div>
+                </div>
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="400">
+                    <div class="faq-question">
+                        <h3>¿Desarrollan sistemas de turnos y software a medida?</h3>
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Sí, creamos sistemas de turnos para clínicas, barberías, salones de belleza, y cualquier negocio que necesite gestionar citas. También desarrollamos software personalizado, sistemas POS y aplicaciones de escritorio.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Contacto CTA -->
     <section class="contact" id="contacto">
         <div class="container">
             <div class="section-header">
                 <span class="section-tag">Contacto</span>
                 <h2 class="section-title"><span>¿Tienes un proyecto en mente?</span></h2>
-                <p class="section-subtitle">Escríbenos y juntos crearemos la página web perfecta para tu negocio</p>
+                <p class="section-subtitle">Escríbenos y desarrollemos juntos la solución perfecta para tu negocio</p>
             </div>
             <div class="contact-wrapper">
                 <div class="contact-info">
@@ -200,6 +333,14 @@
                             <h3>Email</h3>
                             <p>Envíanos un correo</p>
                             <a href="mailto:xaenzweb@gmail.com" class="contact-link">xaenzweb@gmail.com</a>
+                        </div>
+                    </div>
+                    <div class="contact-card">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h3>Horario</h3>
+                            <p>Respondemos rápido</p>
+                            <p class="contact-link">Lunes a Domingo</p>
                         </div>
                     </div>
                 </div>
@@ -251,6 +392,16 @@
                     </div>
                 </div>
             </div>
+            <div class="footer-newsletter">
+                <h4>Recibe ofertas y novedades</h4>
+                <form class="newsletter-form" id="newsletter-form">
+                    <input type="email" placeholder="Tu correo electrónico" required>
+                    <button type="submit" class="btn btn-primary">
+                        <span>Suscribirse</span>
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
             <div class="footer-bottom">
                 <p>&copy; 2026 XaenzWeb. Todos los derechos reservados.</p>
             </div>
@@ -258,6 +409,5 @@
     </footer>
 
     <script src="script.js"></script>
-
 </body>
 </html>

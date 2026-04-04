@@ -3,7 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portafolio - Xaenz Digital</title>
+    <title>Portafolio - Xaenz Digital | Proyectos Realizados</title>
+    <meta name="description" content="Explora nuestro portafolio de proyectos web: páginas profesionales para topografía, belleza y perfumería. Descubre lo que podemos hacer por tu negocio.">
+    <meta name="keywords" content="portafolio web, proyectos desarrollados, trabajos realizados, diseño web Colombia, tiendas online">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Portafolio - Xaenz Digital">
+    <meta property="og:description" content="Explora nuestros proyectos web">
+    <meta property="og:type" content="website">
     <link rel="icon" type="image/png" href="marca.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -37,56 +43,77 @@
     <section class="page-header">
         <div class="container">
             <h1>Nuestro Portafolio</h1>
-            <p>Proyectos que hemos realizado con éxito</p>
+            <p>Proyectos de páginas web, tiendas online y software que hemos creado</p>
         </div>
     </section>
 
 <!-- Portafolio -->
 <section class="portfolio" id="portafolio">
     <div class="container">
+        <div class="portfolio-filters">
+            <button class="filter-btn active" data-filter="all">Todos</button>
+            <button class="filter-btn" data-filter="web">Páginas Web</button>
+            <button class="filter-btn" data-filter="software">Software</button>
+            <button class="filter-btn" data-filter="tienda">Tiendas Online</button>
+        </div>
         <div class="portfolio-grid">
             <!-- Tarjeta 1: GNSS -->
-            <div class="portfolio-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="portfolio-card" data-aos="fade-up" data-aos-delay="100" data-category="web">
                 <div class="portfolio-image">
                     <img src="gnss.png" alt="Topografía GGSS">
                     <div class="portfolio-overlay">
-                        <span>Ver proyecto</span>
+                        <span class="project-type">Página Web</span>
                     </div>
                 </div>
                 <div class="portfolio-info">
                     <h3>Topografía GNSS</h3>
-                    <p>Página web profesional para empresa de topografía y servicios geográficos. Incluye información de servicios, contacto y galería de proyectos.</p>
-                    <a href="https://www-xaenz.github.io/GNSS/" target="_blank" class="btn-project">Ver proyecto <i class="fas fa-arrow-right"></i></a>
+                    <p>Página web corporativa profesional para empresa de topografía y servicios geográficos.</p>
+                    <a href="https://www-xaenz.github.io/GNSS/" target="_blank" class="btn-project">Ver proyecto <i class="fas fa-external-link-alt"></i></a>
                 </div>
             </div>
             
             <!-- Tarjeta 2: PureBeauty -->
-            <div class="portfolio-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="portfolio-card" data-aos="fade-up" data-aos-delay="200" data-category="tienda">
                 <div class="portfolio-image">
                     <img src="purebeauty.png" alt="PureBeauty">
                     <div class="portfolio-overlay">
-                        <span>Ver proyecto</span>
+                        <span class="project-type">Tienda Online</span>
                     </div>
                 </div>
                 <div class="portfolio-info">
                     <h3>PureBeauty</h3>
-                    <p>Sitio web elegante para centro de belleza y cuidado personal. Diseño sofisticado con información de servicios, precios y formulario de contacto.</p>
-                    <a href="https://www-xaenz.github.io/PUREBEAUTY/" target="_blank" class="btn-project">Ver proyecto <i class="fas fa-arrow-right"></i></a>
+                    <p>Sitio web elegante para centro de belleza y cuidado personal con servicios y precios.</p>
+                    <a href="https://www-xaenz.github.io/PUREBEAUTY/" target="_blank" class="btn-project">Ver proyecto <i class="fas fa-external-link-alt"></i></a>
                 </div>
             </div>
             
-            <!-- Tarjeta 3: Ezentia (MOVIDA DENTRO DEL GRID) -->
-            <div class="portfolio-card" data-aos="fade-up" data-aos-delay="300">
+            <!-- Tarjeta 3: Ezentia -->
+            <div class="portfolio-card" data-aos="fade-up" data-aos-delay="300" data-category="tienda">
                 <div class="portfolio-image">
                     <img src="ezentiaPagina.png" alt="Ezentia">
                     <div class="portfolio-overlay">
-                        <span>Ver proyecto</span>
+                        <span class="project-type">Tienda Online</span>
                     </div>
                 </div>
                 <div class="portfolio-info">
                     <h3>Ezentia</h3>
-                    <p>Sitio web moderno para tienda de perfumes exclusivos. Presenta catálogo de productos, descripciones detalladas y opciones de contacto para pedidos.</p>
-                    <a href="https://www-xaenz.github.io/EZENTIA/" target="_blank" class="btn-project">Ver proyecto <i class="fas fa-arrow-right"></i></a>
+                    <p>Catálogo web moderno para tienda de perfumes exclusivos y fragancias.</p>
+                    <a href="https://www-xaenz.github.io/EZENTIA/" target="_blank" class="btn-project">Ver proyecto <i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+
+            <!-- Tarjeta 4: SI-3 Sistema de Turnos -->
+            <div class="portfolio-card" data-aos="fade-up" data-aos-delay="400" data-category="software">
+                <div class="portfolio-image">
+                    <img src="SI3.png" alt="SI-3 Sistema de Turnos">
+                    <div class="portfolio-overlay">
+                        <span class="project-type">Software</span>
+                    </div>
+                </div>
+                <div class="portfolio-info">
+                    <h3>SI-3 Sistema de Turnos</h3>
+                    <p>Sistema de gestión de citas y turnos para clínicas, barberías y salones. Incluye panel admin y visualización en pantalla.</p>
+                    <a href="https://www-xaenz.github.io/SI-3/" target="_blank" class="btn-project">Ver proyecto <i class="fas fa-external-link-alt"></i></a>
                 </div>
             </div>
         </div>
@@ -97,7 +124,7 @@
     <section class="cta">
         <div class="container">
             <h2>¿Tienes un proyecto en mente?</h2>
-            <p>Contáctanos y hagamos realidad tu página web</p>
+            <p>Contáctanos y hagamos realidad tu página web o software</p>
             <a href="contacto.html" class="btn btn-primary">Contáctanos</a>
         </div>
     </section>
@@ -130,6 +157,16 @@
                         <a href="contacto.html" aria-label="Contacto"><i class="fas fa-envelope"></i></a>
                     </div>
                 </div>
+            </div>
+            <div class="footer-newsletter">
+                <h4>Recibe ofertas y novedades</h4>
+                <form class="newsletter-form" id="newsletter-form">
+                    <input type="email" placeholder="Tu correo electrónico" required>
+                    <button type="submit" class="btn btn-primary">
+                        <span>Suscribirse</span>
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </form>
             </div>
             <div class="footer-bottom">
                 <p>&copy; 2026 XaenzWeb. Todos los derechos reservados.</p>

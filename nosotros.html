@@ -3,7 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sobre Nosotros - Xaenz Digital</title>
+    <title>Sobre Nosotros - Xaenz Digital | ConoceNuestro Equipo</title>
+    <meta name="description" content="Conoce a Xaenz Digital, el emprendimiento de Juan José Sáenz dedicado a crear páginas web modernas y funcionales para negocios en Colombia.">
+    <meta name="keywords" content="sobre nosotros, equipo de desarrollo web, Juan José Sáenz, XaenzWeb, desarrollo web Colombia">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Sobre Nosotros - Xaenz Digital">
+    <meta property="og:description" content="Conoce nuestro equipo y nuestra misión">
+    <meta property="og:type" content="website">
     <link rel="icon" type="image/png" href="marca.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -48,22 +54,22 @@
                 <div class="about-text">
                     <span class="section-tag">Nuestra historia</span>
                     <h2 class="section-title"><span>¿Quién es XaenzWeb?</span></h2>
-                    <p>Emprendimiento creado por <strong>Juan José Sáenz</strong>, dedicado a crear páginas web modernas, funcionales y diseñadas para convertir visitantes en clientes.</p>
-                    <p>Como <strong>emprendedor nuevo</strong>, me apasiona la tecnología y el diseño web. Creo que cada negocio merece una presencia digital única y profesional, independientemente de su tamaño.</p>
+                    <p>Emprendimiento creado por <strong>Juan José Sáenz</strong>, dedicado a crear páginas web modernas, sistemas de turnos, software a medida y soluciones digitales que ayudan a negocios a crecer.</p>
+                    <p>Como <strong>emprendedor</strong>, me apasiona la tecnología y el desarrollo de software. Creo que cada negocio merece soluciones digitales únicas y profesionales, independientemente de su tamaño.</p>
                     <p>Mi misión es ayudar a empresas y emprendedores a destacar en el mundo digital mediante sitios web que no solo se ven increíble, sino que también generan resultados reales.</p>
                     <p>Utilizo <strong>GitHub</strong> para el control de versiones y deployment de tus proyectos.</p>
                     
                     <div class="about-stats">
                         <div class="stat-item">
-                            <span class="stat-number">3</span>
+                            <span class="stat-number" data-count="4">0</span>
                             <span class="stat-label">Proyectos</span>
                         </div>
                         <div class="stat-item">
-                            <span class="stat-number">3</span>
+                            <span class="stat-number" data-count="4">0</span>
                             <span class="stat-label">Clientes</span>
                         </div>
                         <div class="stat-item">
-                            <span class="stat-number">100%</span>
+                            <span class="stat-number" data-count="100" data-suffix="%">0</span>
                             <span class="stat-label">Satisfacción</span>
                         </div>
                     </div>
@@ -103,28 +109,40 @@
                 <h2 class="section-title"><span>Proyectos realizados</span></h2>
             </div>
             <div class="portfolio-grid">
-                <div class="portfolio-card" data-aos="fade-up">
+                <div class="portfolio-card" data-aos="fade-up" data-category="web">
                     <div class="portfolio-image">
                         <img src="gnss.png" alt="Topografía GGSS">
                         <div class="portfolio-overlay">
-                            <span>Ver proyecto</span>
+                            <span class="project-type">Página Web</span>
                         </div>
                     </div>
                     <div class="portfolio-info">
                         <h3>Topografía GNSS</h3>
-                        <p>Página web para empresa de topografía</p>
+                        <p>Página web corporativa para empresa de topografía</p>
                     </div>
                 </div>
-                <div class="portfolio-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="portfolio-card" data-aos="fade-up" data-aos-delay="100" data-category="tienda">
                     <div class="portfolio-image">
                         <img src="purebeauty.png" alt="PureBeauty">
                         <div class="portfolio-overlay">
-                            <span>Ver proyecto</span>
+                            <span class="project-type">Tienda Online</span>
                         </div>
                     </div>
                     <div class="portfolio-info">
                         <h3>PureBeauty</h3>
-                        <p>Sitio web para tienda de belleza</p>
+                        <p>Sitio web para centro de belleza</p>
+                    </div>
+                </div>
+                <div class="portfolio-card" data-aos="fade-up" data-aos-delay="200" data-category="software">
+                    <div class="portfolio-image">
+                        <img src="SI3.png" alt="SI-3 Sistema de Turnos">
+                        <div class="portfolio-overlay">
+                            <span class="project-type">Software</span>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>SI-3 Sistema de Turnos</h3>
+                        <p>Sistema de gestión de citas y turnos</p>
                     </div>
                 </div>
             </div>
@@ -168,6 +186,16 @@
                         <a href="contacto.html" aria-label="Contacto"><i class="fas fa-envelope"></i></a>
                     </div>
                 </div>
+            </div>
+            <div class="footer-newsletter">
+                <h4>Recibe ofertas y novedades</h4>
+                <form class="newsletter-form" id="newsletter-form">
+                    <input type="email" placeholder="Tu correo electrónico" required>
+                    <button type="submit" class="btn btn-primary">
+                        <span>Suscribirse</span>
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </form>
             </div>
             <div class="footer-bottom">
                 <p>&copy; 2026 XaenzWeb. Todos los derechos reservados.</p>
