@@ -3,6 +3,7 @@
  */
 
 document.addEventListener('DOMContentLoaded', () => {
+    initCodeBackground();
     initHeader();
     initMobileMenu();
     initSmoothScroll();
@@ -13,6 +14,97 @@ document.addEventListener('DOMContentLoaded', () => {
     initNewsletter();
     initPortfolioFilter();
 });
+
+/**
+ * Background matrix/vector code effect
+ */
+function initCodeBackground() {
+    const existing = document.querySelector('.code-background');
+    if (existing) existing.remove();
+
+    const codeBackground = document.createElement('div');
+    codeBackground.className = 'code-background';
+
+    const codeLines = document.createElement('div');
+    codeLines.className = 'code-lines';
+    const codeTemplates = [
+        () => `const load = ${Math.floor(62 + Math.random() * 37)}%;`,
+        () => `if (ideas) { ship(${Math.floor(100 + Math.random() * 900)}); }`,
+        () => `01 // NODE_${String(Math.floor(1 + Math.random() * 9)).padStart(2, '0')} :: ONLINE`,
+        () => `<Xaenz build="${Math.floor(2000 + Math.random() * 999)}" />`,
+        () => `position: { x: ${Math.floor(10 + Math.random() * 990)}, y: ${Math.floor(10 + Math.random() * 990)} }`,
+        () => `return growth * ${Math.floor(2 + Math.random() * 8)};`
+    ];
+
+    codeTemplates.forEach((template, index) => {
+        const codeLine = document.createElement('span');
+        codeLine.textContent = template();
+        codeLine.dataset.codeTemplate = index;
+        codeLine.style.setProperty('--line-index', index);
+        codeLines.appendChild(codeLine);
+    });
+    codeBackground.appendChild(codeLines);
+
+    setInterval(() => {
+        codeLines.querySelectorAll('span').forEach(codeLine => {
+            const template = codeTemplates[Number(codeLine.dataset.codeTemplate)];
+            codeLine.textContent = template();
+        });
+    }, 1100);
+
+    const canvas = document.createElement('canvas');
+    const ctx = canvas.getContext('2d');
+    codeBackground.appendChild(canvas);
+    document.body.appendChild(codeBackground);
+
+    const fontSize = 18;
+    const chars = '01{}[]<>/;:+=*&$';
+    let columns = 0;
+    let drops = [];
+
+    function resizeCanvas() {
+        const ratio = window.devicePixelRatio || 1;
+        canvas.width = Math.floor(window.innerWidth * ratio);
+        canvas.height = Math.floor(window.innerHeight * ratio);
+        canvas.style.width = window.innerWidth + 'px';
+        canvas.style.height = window.innerHeight + 'px';
+        ctx.setTransform(ratio, 0, 0, ratio, 0, 0);
+
+        columns = Math.ceil(window.innerWidth / fontSize);
+        drops = Array.from({ length: columns }, () => Math.random() * -60);
+    }
+
+    function renderMatrix() {
+        ctx.fillStyle = 'rgba(8, 9, 9, 0.16)';
+        ctx.fillRect(0, 0, window.innerWidth, window.innerHeight);
+
+        for (let i = 0; i < drops.length; i++) {
+            const char = chars[Math.floor(Math.random() * chars.length)];
+            const x = i * fontSize;
+            const y = drops[i] * fontSize;
+
+            const alpha = i % 5 === 0 ? 0.72 : 0.28;
+            ctx.fillStyle = i % 7 === 0 ? `rgba(98, 230, 255, ${alpha})` : `rgba(57, 229, 140, ${alpha})`;
+            ctx.font = `${fontSize}px 'IBM Plex Mono', Consolas, monospace`;
+            ctx.shadowColor = i % 7 === 0 ? 'rgba(98, 230, 255, 0.28)' : 'rgba(57, 229, 140, 0.28)';
+            ctx.shadowBlur = 10;
+            ctx.fillText(char, x, y);
+            ctx.shadowBlur = 0;
+
+            if (y > window.innerHeight && Math.random() > 0.985) {
+                drops[i] = 0;
+            }
+
+            drops[i] += 0.32;
+        }
+
+        requestAnimationFrame(renderMatrix);
+    }
+
+    resizeCanvas();
+    renderMatrix();
+    window.addEventListener('resize', resizeCanvas);
+}
 
 /**
  * Header scroll effect
