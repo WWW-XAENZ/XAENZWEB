@@ -11,8 +11,9 @@
     <meta property="og:title" content="Xaenz Digital - Desarrollo Web Moderno">
     <meta property="og:description" content="Creamos páginas web modernas y funcionales para tu negocio">
     <meta property="og:type" content="website">
+    <meta property="og:image" content="logoXaenzWeb.png">
     <meta name="twitter:card" content="summary_large_image">
-    <link rel="icon" type="image/png" href="marca.png">
+    <link rel="icon" type="image/png" href="logoXaenzWeb.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600&family=Press+Start+2P&family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
@@ -24,16 +25,19 @@
     <!-- Header -->
     <header class="header" id="header">
         <nav class="navbar">
-            <a href="index.html" class="logo">
+            <a href="index.html" class="logo" aria-label="XaenzWeb, inicio">
+                <img src="logoXaenzWeb.png" alt="XaenzWeb">
             </a>
             <ul class="nav-menu" id="nav-menu">
                 <li><a href="index.html" class="nav-link active">Inicio</a></li>
                 <li><a href="servicios.html" class="nav-link">Servicios</a></li>
+                <li><a href="#proceso" class="nav-link">Proceso</a></li>
+                <li><a href="recursos.html" class="nav-link">Recursos</a></li>
                 <li><a href="portafolio.html" class="nav-link">Portafolio</a></li>
                 <li><a href="nosotros.html" class="nav-link">Sobre nosotros</a></li>
                 <li><a href="contacto.html" class="nav-link">Contacto</a></li>
             </ul>
-            <div class="hamburger" id="hamburger">
+            <div class="hamburger" id="hamburger" role="button" tabindex="0" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav-menu">
                 <span class="bar"></span>
                 <span class="bar"></span>
                 <span class="bar"></span>
@@ -184,6 +188,51 @@
         </div>
     </section>
 
+    <!-- Proceso y tecnologías -->
+    <section class="workflow" id="proceso">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Proceso</span>
+                <h2 class="section-title"><span>De la idea al lanzamiento</span></h2>
+                <p class="section-subtitle">Un proceso claro para convertir una necesidad real en una herramienta digital útil.</p>
+            </div>
+            <div class="workflow-grid">
+                <article class="workflow-step" data-aos="fade-up">
+                    <span class="workflow-number">01</span>
+                    <i class="fas fa-comments" aria-hidden="true"></i>
+                    <h3>Entendemos</h3>
+                    <p>Definimos objetivos, usuarios y funciones antes de escribir código.</p>
+                </article>
+                <article class="workflow-step" data-aos="fade-up" data-aos-delay="100">
+                    <span class="workflow-number">02</span>
+                    <i class="fas fa-pen-ruler" aria-hidden="true"></i>
+                    <h3>Diseñamos</h3>
+                    <p>Construimos una experiencia visual coherente con tu marca y tu negocio.</p>
+                </article>
+                <article class="workflow-step" data-aos="fade-up" data-aos-delay="200">
+                    <span class="workflow-number">03</span>
+                    <i class="fas fa-code" aria-hidden="true"></i>
+                    <h3>Desarrollamos</h3>
+                    <p>Convertimos el diseño en una solución rápida, responsive y funcional.</p>
+                </article>
+                <article class="workflow-step" data-aos="fade-up" data-aos-delay="300">
+                    <span class="workflow-number">04</span>
+                    <i class="fas fa-rocket" aria-hidden="true"></i>
+                    <h3>Lanzamos</h3>
+                    <p>Probamos, publicamos y dejamos todo listo para que puedas crecer.</p>
+                </article>
+            </div>
+            <div class="technology-strip" aria-label="Tecnologías y soluciones">
+                <span>HTML5</span>
+                <span>CSS3</span>
+                <span>JAVASCRIPT</span>
+                <span>RESPONSIVE UI</span>
+                <span>WHATSAPP</span>
+                <span>SOFTWARE A MEDIDA</span>
+            </div>
+        </div>
+    </section>
+
     <!-- FAQ Section -->
     <section class="faq" id="faq">
         <div class="container">
@@ -257,7 +306,7 @@
                         <div>
                             <h3>WhatsApp</h3>
                             <p>Escríbenos directamente</p>
-                            <a href="https://wa.me/573102145133" target="_blank" class="contact-link">310 214 5133</a>
+                            <a href="https://wa.me/573102145133" target="_blank" rel="noopener noreferrer" class="contact-link">310 214 5133</a>
                         </div>
                     </div>
                     <div class="contact-card">
@@ -277,7 +326,7 @@
                         </div>
                     </div>
                 </div>
-                <form class="contact-form" id="contact-form" action="https://wa.me/573102145133" method="get" target="_blank">
+                <form class="contact-form" id="contact-form" action="https://wa.me/573102145133" method="get" target="_blank" rel="noopener noreferrer">
                     <h3>Envíanos un mensaje por WhatsApp</h3>
                     <div class="form-group">
                         <label for="name">Nombre</label>
@@ -301,7 +350,8 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-brand">
-                    <a href="index.html" class="logo">
+                    <a href="index.html" class="logo" aria-label="XaenzWeb, inicio">
+                        <img src="logoXaenzWeb.png" alt="XaenzWeb">
                     </a>
                     <p>Creando experiencias digitales extraordinarias para tu negocio.</p>
                 </div>
@@ -313,13 +363,15 @@
                         <li><a href="portafolio.html">Portafolio</a></li>
                         <li><a href="nosotros.html">Sobre nosotros</a></li>
                         <li><a href="contacto.html">Contacto</a></li>
+                        <li><a href="privacidad.html">Privacidad</a></li>
+                        <li><a href="terminos.html">Términos</a></li>
                     </ul>
                 </div>
                 <div class="footer-social">
                     <h4>Síguenos</h4>
                     <div class="social-links">
-                        <a href="https://www.instagram.com/webxaenz27?igsh=am1wd3poMzBpY3Nm" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="https://github.com/WWW-XAENZ" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="https://www.instagram.com/webxaenz27?igsh=am1wd3poMzBpY3Nm" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://github.com/WWW-XAENZ" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
                         <a href="contacto.html" aria-label="Contacto"><i class="fas fa-envelope"></i></a>
                     </div>
                 </div>
@@ -340,6 +392,9 @@
         </div>
     </footer>
 
+    <a class="whatsapp-float" href="https://wa.me/573102145133?text=Hola%20XaenzWeb,%20quiero%20cotizar%20un%20proyecto" target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp">
+        <i class="fab fa-whatsapp" aria-hidden="true"></i><span>Hablemos</span>
+    </a>
     <script src="script.js"></script>
 </body>
 </html>

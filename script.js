@@ -3,22 +3,203 @@
  */
 
 document.addEventListener('DOMContentLoaded', () => {
+    initPageLoader();
+    initLogoLoading();
     initCodeBackground();
     initHeader();
     initMobileMenu();
+    initSoundSystem();
     initSmoothScroll();
     initAnimations();
     initCounter();
     initForm();
+    initQuoteCalculator();
     initFaq();
     initNewsletter();
     initPortfolioFilter();
+    initProtectedPreviews();
+    initGallery();
 });
+
+function initPageLoader() {
+    const loader = document.createElement('div');
+    loader.className = 'page-loader';
+    loader.innerHTML = '<div class="loader-brand"><img src="logoXaenzWeb.png" alt="XaenzWeb"><span class="loader-scan"></span></div><div class="loader-status">INITIALIZING XAENZ SYSTEM <b>OK</b></div><div class="loader-bar"><span></span></div>';
+    document.body.appendChild(loader);
+    window.setTimeout(() => loader.classList.add('is-hidden'), 720);
+    window.setTimeout(() => loader.remove(), 1200);
+}
+
+function initGallery() {
+    const images = document.querySelectorAll('.portfolio-image img');
+    if (!images.length) return;
+
+    const modal = document.createElement('div');
+    modal.className = 'gallery-modal';
+    modal.innerHTML = '<button class="gallery-close" type="button" aria-label="Cerrar imagen"><i class="fas fa-xmark" aria-hidden="true"></i></button><figure><img alt=""><figcaption></figcaption></figure>';
+    document.body.appendChild(modal);
+    const modalImage = modal.querySelector('img');
+    const caption = modal.querySelector('figcaption');
+
+    function closeGallery() {
+        modal.classList.remove('is-open');
+        document.body.style.overflow = '';
+    }
+
+    images.forEach(image => {
+        image.tabIndex = 0;
+        image.setAttribute('role', 'button');
+        const openGallery = () => {
+            modalImage.src = image.currentSrc || image.src;
+            modalImage.alt = image.alt;
+            caption.textContent = image.alt;
+            modal.classList.add('is-open');
+            document.body.style.overflow = 'hidden';
+        };
+        image.addEventListener('click', openGallery);
+        image.addEventListener('keydown', event => {
+            if (event.key === 'Enter' || event.key === ' ') {
+                event.preventDefault();
+                openGallery();
+            }
+        });
+    });
+
+    modal.querySelector('.gallery-close').addEventListener('click', closeGallery);
+    modal.addEventListener('click', event => {
+        if (event.target === modal) closeGallery();
+    });
+    document.addEventListener('keydown', event => {
+        if (event.key === 'Escape') closeGallery();
+    });
+}
+
+function initProtectedPreviews() {
+    document.querySelectorAll('.protected-preview').forEach(preview => {
+        preview.addEventListener('contextmenu', event => event.preventDefault());
+        preview.addEventListener('dragstart', event => event.preventDefault());
+        preview.addEventListener('selectstart', event => event.preventDefault());
+    });
+}
+
+function initSoundSystem() {
+    if (!window.AudioContext && !window.webkitAudioContext) return;
+
+    const AudioContextClass = window.AudioContext || window.webkitAudioContext;
+    let audioContext;
+    const enabled = true;
+    let soundStep = 0;
+    let lastHoverAt = 0;
+
+    function ensureAudioContext() {
+        audioContext ||= new AudioContextClass();
+        if (audioContext.state === 'suspended') audioContext.resume();
+        return audioContext;
+    }
+
+    function playTone(frequency, duration = 0.06, type = 'square', volume = 0.025, delay = 0) {
+        if (!enabled) return;
+        const context = ensureAudioContext();
+        const oscillator = context.createOscillator();
+        const gain = context.createGain();
+        const now = context.currentTime + delay;
+        oscillator.type = type;
+        oscillator.frequency.setValueAtTime(frequency, now);
+        gain.gain.setValueAtTime(0.0001, now);
+        gain.gain.exponentialRampToValueAtTime(volume, now + 0.008);
+        gain.gain.exponentialRampToValueAtTime(0.0001, now + duration);
+        oscillator.connect(gain).connect(context.destination);
+        oscillator.start(now);
+        oscillator.stop(now + duration + 0.01);
+    }
+
+    function playSound(sound) {
+        const sounds = {
+            glitch: [
+                [[170, 0.025, 'square', 0.012], [920, 0.018, 'sawtooth', 0.009, 0.025], [280, 0.03, 'square', 0.01, 0.05]],
+                [[240, 0.02, 'sawtooth', 0.01], [760, 0.025, 'square', 0.008, 0.025], [190, 0.04, 'triangle', 0.009, 0.06]],
+                [[120, 0.03, 'square', 0.011], [680, 0.02, 'sawtooth', 0.008, 0.03], [340, 0.035, 'square', 0.009, 0.06]]
+            ],
+            hover: [
+                [[620, 0.025, 'square', 0.008]],
+                [[700, 0.022, 'triangle', 0.007]],
+                [[560, 0.028, 'sine', 0.007]]
+            ],
+            click: [
+                [[180, 0.045, 'sawtooth', 0.014], [360, 0.065, 'square', 0.01, 0.035]],
+                [[210, 0.035, 'square', 0.012], [420, 0.07, 'triangle', 0.009, 0.04]],
+                [[150, 0.05, 'triangle', 0.012], [300, 0.055, 'sawtooth', 0.008, 0.045]]
+            ],
+            navigate: [
+                [[260, 0.05, 'square', 0.012], [520, 0.09, 'triangle', 0.012, 0.045]],
+                [[300, 0.045, 'triangle', 0.011], [600, 0.08, 'sine', 0.01, 0.05]],
+                [[220, 0.055, 'square', 0.01], [440, 0.1, 'triangle', 0.011, 0.05]]
+            ],
+            menu: [
+                [[240, 0.05, 'square', 0.012], [480, 0.07, 'square', 0.01, 0.05]],
+                [[190, 0.045, 'triangle', 0.011], [380, 0.08, 'square', 0.009, 0.055]]
+            ],
+            confirm: [
+                [[440, 0.06, 'triangle', 0.012], [660, 0.1, 'triangle', 0.014, 0.06]],
+                [[392, 0.06, 'sine', 0.011], [784, 0.09, 'triangle', 0.012, 0.065]]
+            ]
+        };
+
+        const variants = sounds[sound] || sounds.click;
+        const pattern = variants[soundStep++ % variants.length];
+        pattern.forEach(([frequency, duration, type, volume, delay]) => {
+            playTone(frequency, duration, type, volume, delay || 0);
+        });
+    }
+
+    document.addEventListener('pointerover', event => {
+        const target = event.target.closest('a, button, [role="button"], summary, .faq-question');
+        if (!target || target.contains(event.relatedTarget)) return;
+        if (target.matches('.logo')) {
+            playSound('glitch');
+        } else {
+            const now = performance.now();
+            if (now - lastHoverAt > 90) {
+                lastHoverAt = now;
+                playSound('hover');
+            }
+        }
+    });
+
+    document.addEventListener('click', event => {
+        const target = event.target.closest('a, button, [role="button"], summary, .faq-question');
+        if (!target) return;
+        if (target.matches('.nav-link, .btn, .btn-project, .social-links a')) {
+            playSound('navigate');
+        } else if (target.matches('.hamburger')) {
+            playSound('menu');
+        } else if (target.matches('.filter-btn, .faq-question')) {
+            playSound('confirm');
+        } else {
+            playSound('click');
+        }
+    });
+}
+
+function initLogoLoading() {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+    const logos = document.querySelectorAll('.logo');
+    logos.forEach(logo => logo.classList.add('logo-loading'));
+
+    window.setTimeout(() => {
+        logos.forEach(logo => logo.classList.remove('logo-loading'));
+    }, 1400);
+}
 
 /**
  * Background matrix/vector code effect
  */
 function initCodeBackground() {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches || window.innerWidth <= 700) {
+        return;
+    }
+
     const existing = document.querySelector('.code-background');
     if (existing) existing.remove();
 
@@ -133,16 +314,29 @@ function initMobileMenu() {
 
     if (!hamburger || !navMenu) return;
 
-    hamburger.addEventListener('click', () => {
+    const toggleMenu = () => {
         hamburger.classList.toggle('active');
         navMenu.classList.toggle('active');
-        document.body.style.overflow = navMenu.classList.contains('active') ? 'hidden' : '';
+        const isOpen = navMenu.classList.contains('active');
+        hamburger.setAttribute('aria-expanded', String(isOpen));
+        hamburger.setAttribute('aria-label', isOpen ? 'Cerrar menú' : 'Abrir menú');
+        document.body.style.overflow = isOpen ? 'hidden' : '';
+    };
+
+    hamburger.addEventListener('click', toggleMenu);
+    hamburger.addEventListener('keydown', (event) => {
+        if (event.key === 'Enter' || event.key === ' ') {
+            event.preventDefault();
+            toggleMenu();
+        }
     });
 
     navLinks.forEach(link => {
         link.addEventListener('click', () => {
             hamburger.classList.remove('active');
             navMenu.classList.remove('active');
+            hamburger.setAttribute('aria-expanded', 'false');
+            hamburger.setAttribute('aria-label', 'Abrir menú');
             document.body.style.overflow = '';
         });
     });
@@ -151,6 +345,8 @@ function initMobileMenu() {
         if (!hamburger.contains(e.target) && !navMenu.contains(e.target)) {
             hamburger.classList.remove('active');
             navMenu.classList.remove('active');
+            hamburger.setAttribute('aria-expanded', 'false');
+            hamburger.setAttribute('aria-label', 'Abrir menú');
             document.body.style.overflow = '';
         }
     });
@@ -253,22 +449,40 @@ function initForm() {
             return;
         }
 
-        const submitBtn = form.querySelector('.btn-submit');
-        const originalText = submitBtn?.innerHTML;
-        
-        if (submitBtn) {
-            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Enviando...';
-            submitBtn.disabled = true;
-        }
+        const fullMessage = `Hola, soy ${name}. ${message}`;
+        window.open(`https://wa.me/573102145133?text=${encodeURIComponent(fullMessage)}`, '_blank', 'noopener,noreferrer');
+        showAlert('Abrimos WhatsApp con tu mensaje listo para enviar.', 'success');
+    });
+}
 
-        setTimeout(() => {
-            showAlert('¡Mensaje enviado correctamente! Te contactaremos pronto.', 'success');
-            form.reset();
-            if (submitBtn) {
-                submitBtn.innerHTML = originalText;
-                submitBtn.disabled = false;
-            }
-        }, 1500);
+function initQuoteCalculator() {
+    const form = document.getElementById('quote-form');
+    if (!form) return;
+
+    const type = document.getElementById('quote-type');
+    const size = document.getElementById('quote-size');
+    const feature = document.getElementById('quote-feature');
+    const total = document.getElementById('quote-total');
+    const formatMoney = value => `$${value.toLocaleString('es-CO')} COP`;
+
+    function updateQuote() {
+        const base = Number(type.selectedOptions[0].dataset.base);
+        const scopeExtra = Number(size.selectedOptions[0].dataset.extra);
+        const featureExtra = Number(feature.selectedOptions[0].dataset.extra);
+        const estimate = base + scopeExtra + featureExtra;
+        total.textContent = `${formatMoney(estimate)} - ${formatMoney(Math.round(estimate * 1.5))}`;
+    }
+
+    [type, size, feature].forEach(select => select.addEventListener('change', updateQuote));
+    updateQuote();
+
+    form.addEventListener('submit', event => {
+        event.preventDefault();
+        const projectName = type.selectedOptions[0].textContent;
+        const scopeName = size.selectedOptions[0].textContent;
+        const featureName = feature.selectedOptions[0].textContent;
+        const message = `Hola, quiero cotizar ${projectName}. Alcance: ${scopeName}. Función adicional: ${featureName}. Referencia: ${total.textContent}.`;
+        window.open(`https://wa.me/573102145133?text=${encodeURIComponent(message)}`, '_blank', 'noopener,noreferrer');
     });
 }
 
@@ -341,9 +555,17 @@ function initPortfolioFilter() {
     if (!filterBtns.length) return;
 
     filterBtns.forEach(btn => {
+        btn.setAttribute('aria-pressed', btn.classList.contains('active') ? 'true' : 'false');
+    });
+
+    filterBtns.forEach(btn => {
         btn.addEventListener('click', () => {
-            filterBtns.forEach(b => b.classList.remove('active'));
+            filterBtns.forEach(b => {
+                b.classList.remove('active');
+                b.setAttribute('aria-pressed', 'false');
+            });
             btn.classList.add('active');
+            btn.setAttribute('aria-pressed', 'true');
             const filter = btn.dataset.filter;
 
             portfolioCards.forEach(card => {

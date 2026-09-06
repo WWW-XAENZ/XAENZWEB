@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ficha de proyecto desarrollado por XaenzWeb.">
+    <meta name="robots" content="index, follow">
+    <meta property="og:image" content="logoXaenzWeb.png">
+    <title>Proyecto | XaenzWeb</title>
+    <link rel="icon" type="image/png" href="logoXaenzWeb.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600&family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="announcement-bar"><span>BUILD 2026 // FICHA DE PROYECTO // XAENZWEB</span></div>
+    <header class="header scrolled" id="header">
+        <nav class="navbar">
+            <a href="index.html" class="logo" aria-label="XaenzWeb, inicio">
+                <img src="logoXaenzWeb.png" alt="XaenzWeb">
+            </a>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="index.html" class="nav-link">Inicio</a></li>
+                <li><a href="servicios.html" class="nav-link">Servicios</a></li>
+                <li><a href="index.html#proceso" class="nav-link">Proceso</a></li>
+                <li><a href="recursos.html" class="nav-link">Recursos</a></li>
+                <li><a href="portafolio.html" class="nav-link active">Portafolio</a></li>
+                <li><a href="nosotros.html" class="nav-link">Sobre nosotros</a></li>
+                <li><a href="contacto.html" class="nav-link">Contacto</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger" role="button" tabindex="0" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav-menu">
+                <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+
+    <main class="project-detail" id="project-detail">
+        <div class="container">
+            <a class="back-link" href="portafolio.html"><i class="fas fa-arrow-left" aria-hidden="true"></i> Volver al portafolio</a>
+            <div class="project-detail-header">
+                <span class="section-tag" id="project-type">Proyecto digital</span>
+                <h1 id="project-title">Cargando proyecto...</h1>
+                <p id="project-summary"></p>
+            </div>
+            <div class="project-detail-layout">
+                <div class="project-detail-visual">
+                    <img id="project-image" src="logoXaenzWeb.png" alt="Vista previa del proyecto">
+                </div>
+                <div class="project-detail-copy">
+                    <div class="detail-block">
+                        <span class="detail-label">Objetivo</span>
+                        <p id="project-objective"></p>
+                    </div>
+                    <div class="detail-block">
+                        <span class="detail-label">Funciones</span>
+                        <ul id="project-features"></ul>
+                    </div>
+                    <div class="detail-block">
+                        <span class="detail-label">Enfoque</span>
+                        <p id="project-approach"></p>
+                    </div>
+                    <a class="btn btn-primary" id="project-action" href="contacto.html">Hablemos de tu proyecto <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <a class="whatsapp-float" href="https://wa.me/573102145133?text=Hola%20XaenzWeb,%20quiero%20cotizar%20un%20proyecto" target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp">
+        <i class="fab fa-whatsapp" aria-hidden="true"></i><span>Hablemos</span>
+    </a>
+    <script src="script.js"></script>
+    <script>
+        const projects = {
+            gnss: {
+                type: 'Página web corporativa', title: 'Topografía GNSS', image: 'gnss.png',
+                summary: 'Una presencia digital para una empresa especializada en precisión geográfica y topografía.',
+                objective: 'Presentar servicios técnicos complejos de forma clara y facilitar solicitudes de cotización.',
+                features: ['Georreferenciación y levantamientos', 'Servicios de rectificación, desenglobes y englobe', 'Proyectos realizados y equipos especializados', 'Contacto directo para cotizaciones'],
+                approach: 'Jerarquía de información, lenguaje técnico accesible y llamadas a la acción orientadas a proyectos de ingeniería y construcción.'
+            },
+            purebeauty: {
+                type: 'Tienda online', title: 'Pure Beauty', image: 'purebeauty.png',
+                summary: 'Una experiencia de catálogo para maquillaje, cuidado capilar y productos de belleza seleccionados.',
+                objective: 'Organizar el catálogo y convertir la consulta de productos en pedidos directos.',
+                features: ['Productos destacados y categorías', 'Disponibilidad y precios visibles', 'Carrito y pedidos por WhatsApp', 'Contacto y asesoría personalizada'],
+                approach: 'Diseño cálido, navegación simple y foco visual en los productos para acompañar la decisión de compra.'
+            },
+            ezentia: {
+                type: 'Comercio electrónico', title: 'Ezentia', image: 'ezentiaPagina.png',
+                summary: 'Una tienda de perfumería de lujo para descubrir fragancias originales y comprar en Colombia.',
+                objective: 'Construir una experiencia premium que combine descubrimiento de aromas, confianza y compra.',
+                features: ['Catálogo de fragancias y marcas', 'Notas aromáticas y fichas de producto', 'Carrito y pedidos por WhatsApp', 'Envíos nacionales y garantía de autenticidad'],
+                approach: 'Dirección visual elegante, presentación editorial de productos y recorrido de compra directo.'
+            },
+            si3: {
+                type: 'Software operativo', title: 'SI-3 Sistema de Turnos', image: 'SI3.png',
+                summary: 'Una herramienta para organizar la atención de proveedores y mostrar los turnos en pantalla.',
+                objective: 'Reducir fricción en la atención mediante un flujo claro de registro, solicitud y consulta.',
+                features: ['Registro de proveedores', 'Solicitud y consulta de turnos', 'Vista para pantalla TV', 'Información institucional y de contacto'],
+                approach: 'Interfaz funcional y directa, diseñada para que cada usuario entienda el siguiente paso sin capacitación extensa.'
+            },
+            alistamiento: {
+                type: 'Software interno', title: 'Alistamiento SI-3', image: 'SI3.png',
+                summary: 'Un módulo de registro para documentar el alistamiento de pedidos y dejar trazabilidad del proceso.',
+                objective: 'Centralizar la información del alistamiento en un registro verificable y fácil de consultar.',
+                features: ['Fecha, turno y referencia', 'Control de base, fomi, forro y componentes', 'Registro fotográfico', 'Firma del responsable y confirmación'],
+                approach: 'Flujo operativo compacto para capturar evidencia y completar cada registro desde una sola pantalla.'
+            }
+        };
+
+        const key = new URLSearchParams(window.location.search).get('proyecto') || 'gnss';
+        const project = projects[key] || projects.gnss;
+        document.title = `${project.title} | XaenzWeb`;
+        document.getElementById('project-type').textContent = project.type;
+        document.getElementById('project-title').textContent = project.title;
+        document.getElementById('project-summary').textContent = project.summary;
+        document.getElementById('project-objective').textContent = project.objective;
+        document.getElementById('project-approach').textContent = project.approach;
+        document.getElementById('project-image').src = project.image;
+        document.getElementById('project-image').alt = `Vista previa de ${project.title}`;
+        document.getElementById('project-features').innerHTML = project.features.map(feature => `<li><i class="fas fa-check" aria-hidden="true"></i>${feature}</li>`).join('');
+    </script>
+</body>
+</html>

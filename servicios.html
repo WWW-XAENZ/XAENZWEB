@@ -10,7 +10,8 @@
     <meta property="og:title" content="Servicios - Xaenz Digital">
     <meta property="og:description" content="Desarrollo web profesional para tu negocio">
     <meta property="og:type" content="website">
-    <link rel="icon" type="image/png" href="marca.png">
+    <meta property="og:image" content="logoXaenzWeb.png">
+    <link rel="icon" type="image/png" href="logoXaenzWeb.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600&family=Press+Start+2P&family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
@@ -22,16 +23,19 @@
     <!-- Header -->
     <header class="header scrolled" id="header">
         <nav class="navbar">
-            <a href="index.html" class="logo">
+            <a href="index.html" class="logo" aria-label="XaenzWeb, inicio">
+                <img src="logoXaenzWeb.png" alt="XaenzWeb">
             </a>
             <ul class="nav-menu" id="nav-menu">
                 <li><a href="index.html" class="nav-link">Inicio</a></li>
                 <li><a href="servicios.html" class="nav-link active">Servicios</a></li>
+                <li><a href="index.html#proceso" class="nav-link">Proceso</a></li>
+                <li><a href="recursos.html" class="nav-link">Recursos</a></li>
                 <li><a href="portafolio.html" class="nav-link">Portafolio</a></li>
                 <li><a href="nosotros.html" class="nav-link">Sobre nosotros</a></li>
                 <li><a href="contacto.html" class="nav-link">Contacto</a></li>
             </ul>
-            <div class="hamburger" id="hamburger">
+            <div class="hamburger" id="hamburger" role="button" tabindex="0" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav-menu">
                 <span class="bar"></span>
                 <span class="bar"></span>
                 <span class="bar"></span>
@@ -111,7 +115,8 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-brand">
-                    <a href="index.html" class="logo">
+                    <a href="index.html" class="logo" aria-label="XaenzWeb, inicio">
+                        <img src="logoXaenzWeb.png" alt="XaenzWeb">
                     </a>
                     <p>Creando experiencias digitales extraordinarias para tu negocio.</p>
                 </div>
@@ -123,13 +128,15 @@
                         <li><a href="portafolio.html">Portafolio</a></li>
                         <li><a href="nosotros.html">Sobre nosotros</a></li>
                         <li><a href="contacto.html">Contacto</a></li>
+                        <li><a href="privacidad.html">Privacidad</a></li>
+                        <li><a href="terminos.html">Términos</a></li>
                     </ul>
                 </div>
                 <div class="footer-social">
                     <h4>Síguenos</h4>
                     <div class="social-links">
-                        <a href="https://www.instagram.com/webxaenz27?igsh=am1wd3poMzBpY3Nm" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="https://github.com/WWW-XAENZ" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="https://www.instagram.com/webxaenz27?igsh=am1wd3poMzBpY3Nm" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://github.com/WWW-XAENZ" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
                         <a href="contacto.html" aria-label="Contacto"><i class="fas fa-envelope"></i></a>
                     </div>
                 </div>
@@ -150,6 +157,9 @@
         </div>
     </footer>
 
+    <a class="whatsapp-float" href="https://wa.me/573102145133?text=Hola%20XaenzWeb,%20quiero%20cotizar%20un%20proyecto" target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp">
+        <i class="fab fa-whatsapp" aria-hidden="true"></i><span>Hablemos</span>
+    </a>
     <script src="script.js"></script>
 </body>
 </html>

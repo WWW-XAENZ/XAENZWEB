@@ -10,7 +10,8 @@
     <meta property="og:title" content="Contacto - Xaenz Digital">
     <meta property="og:description" content="Contáctanos para tu proyecto web">
     <meta property="og:type" content="website">
-    <link rel="icon" type="image/png" href="marca.png">
+    <meta property="og:image" content="logoXaenzWeb.png">
+    <link rel="icon" type="image/png" href="logoXaenzWeb.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600&family=Press+Start+2P&family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
@@ -22,16 +23,19 @@
     <!-- Header -->
     <header class="header scrolled" id="header">
         <nav class="navbar">
-            <a href="index.html" class="logo">
+            <a href="index.html" class="logo" aria-label="XaenzWeb, inicio">
+                <img src="logoXaenzWeb.png" alt="XaenzWeb">
             </a>
             <ul class="nav-menu" id="nav-menu">
                 <li><a href="index.html" class="nav-link">Inicio</a></li>
                 <li><a href="servicios.html" class="nav-link">Servicios</a></li>
+                <li><a href="index.html#proceso" class="nav-link">Proceso</a></li>
+                <li><a href="recursos.html" class="nav-link">Recursos</a></li>
                 <li><a href="portafolio.html" class="nav-link">Portafolio</a></li>
                 <li><a href="nosotros.html" class="nav-link">Sobre nosotros</a></li>
                 <li><a href="contacto.html" class="nav-link active">Contacto</a></li>
             </ul>
-            <div class="hamburger" id="hamburger">
+            <div class="hamburger" id="hamburger" role="button" tabindex="0" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav-menu">
                 <span class="bar"></span>
                 <span class="bar"></span>
                 <span class="bar"></span>
@@ -57,7 +61,7 @@
                         <div>
                             <h3>WhatsApp</h3>
                             <p>Escríbenos directamente</p>
-                            <a href="https://wa.me/573102145133" target="_blank" class="contact-link">310 214 5133</a>
+                            <a href="https://wa.me/573102145133" target="_blank" rel="noopener noreferrer" class="contact-link">310 214 5133</a>
                         </div>
                     </div>
                     <div class="contact-card">
@@ -93,6 +97,43 @@
                     </button>
                 </form>
             </div>
+            <div class="quote-tool" id="cotizador">
+                <div class="quote-intro">
+                    <span class="section-tag">Cotizador</span>
+                    <h2>Calcula una inversión inicial</h2>
+                    <p>Selecciona lo que necesitas y recibe una referencia para conversar tu proyecto por WhatsApp.</p>
+                </div>
+                <form class="quote-form" id="quote-form">
+                    <label for="quote-type">Tipo de proyecto</label>
+                    <select id="quote-type">
+                        <option value="web" data-base="450000">Página web</option>
+                        <option value="store" data-base="850000">Tienda online</option>
+                        <option value="software" data-base="1400000">Software a medida</option>
+                        <option value="turns" data-base="1800000">Sistema de turnos</option>
+                    </select>
+                    <label for="quote-size">Alcance</label>
+                    <select id="quote-size">
+                        <option value="small" data-extra="0">Inicial</option>
+                        <option value="medium" data-extra="250000">Profesional</option>
+                        <option value="large" data-extra="600000">Avanzado</option>
+                    </select>
+                    <label for="quote-feature">Función adicional</label>
+                    <select id="quote-feature">
+                        <option value="none" data-extra="0">Sin función adicional</option>
+                        <option value="whatsapp" data-extra="100000">Integración con WhatsApp</option>
+                        <option value="admin" data-extra="350000">Panel de administración</option>
+                        <option value="payments" data-extra="450000">Pagos o carrito</option>
+                    </select>
+                    <div class="quote-result" aria-live="polite">
+                        <span>Referencia estimada</span>
+                        <strong id="quote-total">$450.000 - $675.000 COP</strong>
+                    </div>
+                    <button type="submit" class="btn btn-primary">
+                        <span>Consultar por WhatsApp</span>
+                        <i class="fab fa-whatsapp" aria-hidden="true"></i>
+                    </button>
+                </form>
+            </div>
         </div>
     </section>
 
@@ -101,7 +142,8 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-brand">
-                    <a href="index.html" class="logo">
+                    <a href="index.html" class="logo" aria-label="XaenzWeb, inicio">
+                        <img src="logoXaenzWeb.png" alt="XaenzWeb">
                     </a>
                     <p>Creando experiencias digitales extraordinarias para tu negocio.</p>
                 </div>
@@ -113,13 +155,15 @@
                         <li><a href="portafolio.html">Portafolio</a></li>
                         <li><a href="nosotros.html">Sobre nosotros</a></li>
                         <li><a href="contacto.html">Contacto</a></li>
+                        <li><a href="privacidad.html">Privacidad</a></li>
+                        <li><a href="terminos.html">Términos</a></li>
                     </ul>
                 </div>
                 <div class="footer-social">
                     <h4>Síguenos</h4>
                     <div class="social-links">
-                        <a href="https://www.instagram.com/webxaenz27?igsh=am1wd3poMzBpY3Nm" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i><span class="social-fallback">IG</span></a>
-                        <a href="https://github.com/WWW-XAENZ" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i><span class="social-fallback">GH</span></a>
+                        <a href="https://www.instagram.com/webxaenz27?igsh=am1wd3poMzBpY3Nm" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i><span class="social-fallback">IG</span></a>
+                        <a href="https://github.com/WWW-XAENZ" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i><span class="social-fallback">GH</span></a>
                         <a href="contacto.html" aria-label="Contacto"><i class="fa-solid fa-envelope" aria-hidden="true"></i><span class="social-fallback">@</span></a>
                     </div>
                 </div>
@@ -140,24 +184,9 @@
         </div>
     </footer>
 
+    <a class="whatsapp-float" href="https://wa.me/573102145133?text=Hola%20XaenzWeb,%20quiero%20cotizar%20un%20proyecto" target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp">
+        <i class="fab fa-whatsapp" aria-hidden="true"></i><span>Hablemos</span>
+    </a>
     <script src="script.js"></script>
-    <script>
-        // Script específico para el formulario de contacto
-        document.getElementById('contact-form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            const name = document.getElementById('name').value;
-            const message = document.getElementById('message').value;
-            
-            // Construir el mensaje completo
-            const fullMessage = `Hola, soy ${name}. ${message}`;
-            
-            // Codificar para URL
-            const encodedMessage = encodeURIComponent(fullMessage);
-            
-            // Redirigir a WhatsApp
-            window.open(`https://wa.me/573102145133?text=${encodedMessage}`, '_blank');
-        });
-    </script>
 </body>
 </html>

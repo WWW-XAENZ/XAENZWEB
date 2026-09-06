@@ -10,7 +10,8 @@
     <meta property="og:title" content="Portafolio - Xaenz Digital">
     <meta property="og:description" content="Explora nuestros proyectos web">
     <meta property="og:type" content="website">
-    <link rel="icon" type="image/png" href="marca.png">
+    <meta property="og:image" content="logoXaenzWeb.png">
+    <link rel="icon" type="image/png" href="logoXaenzWeb.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600&family=Press+Start+2P&family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
@@ -22,16 +23,19 @@
     <!-- Header -->
     <header class="header scrolled" id="header">
         <nav class="navbar">
-            <a href="index.html" class="logo">
+            <a href="index.html" class="logo" aria-label="XaenzWeb, inicio">
+                <img src="logoXaenzWeb.png" alt="XaenzWeb">
             </a>
             <ul class="nav-menu" id="nav-menu">
                 <li><a href="index.html" class="nav-link">Inicio</a></li>
                 <li><a href="servicios.html" class="nav-link">Servicios</a></li>
+                <li><a href="index.html#proceso" class="nav-link">Proceso</a></li>
+                <li><a href="recursos.html" class="nav-link">Recursos</a></li>
                 <li><a href="portafolio.html" class="nav-link active">Portafolio</a></li>
                 <li><a href="nosotros.html" class="nav-link">Sobre nosotros</a></li>
                 <li><a href="contacto.html" class="nav-link">Contacto</a></li>
             </ul>
-            <div class="hamburger" id="hamburger">
+            <div class="hamburger" id="hamburger" role="button" tabindex="0" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav-menu">
                 <span class="bar"></span>
                 <span class="bar"></span>
                 <span class="bar"></span>
@@ -60,60 +64,80 @@
             <!-- Tarjeta 1: GNSS -->
             <div class="portfolio-card" data-aos="fade-up" data-aos-delay="100" data-category="web">
                 <div class="portfolio-image">
-                    <img src="gnss.png" alt="Topografía GGSS">
+                    <img src="gnss.png" alt="Identidad visual de GNSS Topografía" width="800" height="500" loading="lazy" decoding="async">
                     <div class="portfolio-overlay">
                         <span class="project-type">Página Web</span>
                     </div>
                 </div>
                 <div class="portfolio-info">
                     <h3>Topografía GNSS</h3>
-                    <p>Página web corporativa profesional para empresa de topografía y servicios geográficos.</p>
-                    <a href="https://www-xaenz.github.io/GNSS/" target="_blank" class="btn-project">Ver proyecto <i class="fas fa-external-link-alt"></i></a>
+                    <p>Sitio corporativo para GNSS Topografía, especializado en georreferenciación, levantamientos, rectificación de áreas, desenglobes y fotogrametría en Antioquia.</p>
+                    <a href="https://www-xaenz.github.io/GNSS/" target="_blank" rel="noopener noreferrer" class="btn-project">Ver proyecto <i class="fas fa-external-link-alt" aria-hidden="true"></i></a>
+                    <a href="proyecto.html?proyecto=gnss" class="btn-project">Ver ficha <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
                 </div>
             </div>
             
             <!-- Tarjeta 2: PureBeauty -->
             <div class="portfolio-card" data-aos="fade-up" data-aos-delay="200" data-category="tienda">
                 <div class="portfolio-image">
-                    <img src="purebeauty.png" alt="PureBeauty">
+                    <img src="purebeauty.png" alt="Identidad visual de Pure Beauty" width="800" height="500" loading="lazy" decoding="async">
                     <div class="portfolio-overlay">
                         <span class="project-type">Tienda Online</span>
                     </div>
                 </div>
                 <div class="portfolio-info">
                     <h3>PureBeauty</h3>
-                    <p>Sitio web elegante para centro de belleza y cuidado personal con servicios y precios.</p>
-                    <a href="https://www-xaenz.github.io/PUREBEAUTY/" target="_blank" class="btn-project">Ver proyecto <i class="fas fa-external-link-alt"></i></a>
+                    <p>Tienda online de maquillaje, productos capilares y cuidado facial, con catálogo de productos, disponibilidad, carrito y pedidos directos por WhatsApp.</p>
+                    <a href="https://www-xaenz.github.io/PUREBEAUTY/" target="_blank" rel="noopener noreferrer" class="btn-project">Ver proyecto <i class="fas fa-external-link-alt" aria-hidden="true"></i></a>
+                    <a href="proyecto.html?proyecto=purebeauty" class="btn-project">Ver ficha <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
                 </div>
             </div>
             
             <!-- Tarjeta 3: Ezentia -->
             <div class="portfolio-card" data-aos="fade-up" data-aos-delay="300" data-category="tienda">
                 <div class="portfolio-image">
-                    <img src="ezentiaPagina.png" alt="Ezentia">
+                    <img src="ezentiaPagina.png" alt="Vista previa de la tienda online Ezentia" width="800" height="500" loading="lazy" decoding="async">
                     <div class="portfolio-overlay">
                         <span class="project-type">Tienda Online</span>
                     </div>
                 </div>
                 <div class="portfolio-info">
                     <h3>Ezentia</h3>
-                    <p>Catálogo web moderno para tienda de perfumes exclusivos y fragancias.</p>
-                    <a href="https://www-xaenz.github.io/EZENTIA/" target="_blank" class="btn-project">Ver proyecto <i class="fas fa-external-link-alt"></i></a>
+                    <p>Experiencia de comercio electrónico para una perfumería de lujo, con fragancias originales, fichas de producto, notas aromáticas, carrito y envíos a Colombia.</p>
+                    <a href="https://www-xaenz.github.io/EZENTIA/" target="_blank" rel="noopener noreferrer" class="btn-project">Ver proyecto <i class="fas fa-external-link-alt" aria-hidden="true"></i></a>
+                    <a href="proyecto.html?proyecto=ezentia" class="btn-project">Ver ficha <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
                 </div>
             </div>
 
             <!-- Tarjeta 4: SI-3 Sistema de Turnos -->
             <div class="portfolio-card" data-aos="fade-up" data-aos-delay="400" data-category="software">
                 <div class="portfolio-image">
-                    <img src="SI3.png" alt="SI-3 Sistema de Turnos">
+                    <img class="protected-preview" src="SI3.png" alt="Vista previa del sistema de turnos SI-3 para proveedores" width="800" height="500" loading="lazy" decoding="async" draggable="false">
                     <div class="portfolio-overlay">
                         <span class="project-type">Software</span>
                     </div>
                 </div>
                 <div class="portfolio-info">
                     <h3>SI-3 Sistema de Turnos</h3>
-                    <p>Sistema de gestión de citas y turnos para clínicas, barberías y salones. Incluye panel admin y visualización en pantalla.</p>
-                    <a href="https://www-xaenz.github.io/SI-3/" target="_blank" class="btn-project">Ver proyecto <i class="fas fa-external-link-alt"></i></a>
+                    <p>Sistema digital de turnos para proveedores de SI3 ZF SAS, con registro de usuarios, solicitud de atención, consulta del turno y visualización en pantalla TV.</p>
+                    <span class="btn-project btn-project-disabled" aria-label="Vista protegida, acceso interactivo desactivado">Vista protegida <i class="fas fa-lock" aria-hidden="true"></i></span>
+                    <a href="proyecto.html?proyecto=si3" class="btn-project">Ver ficha <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+                </div>
+            </div>
+
+            <!-- Tarjeta 5: Alistamiento SI-3 -->
+            <div class="portfolio-card" data-aos="fade-up" data-aos-delay="500" data-category="software">
+                <div class="portfolio-image">
+                    <img class="protected-preview" src="SI3.png" alt="Vista previa del sistema de registro de alistamiento SI-3" width="800" height="500" loading="lazy" decoding="async" draggable="false">
+                    <div class="portfolio-overlay">
+                        <span class="project-type">Software interno</span>
+                    </div>
+                </div>
+                <div class="portfolio-info">
+                    <h3>Alistamiento SI-3</h3>
+                    <p>Sistema interno para registrar el alistamiento de pedidos, con fecha, turno, referencia, materiales, fotografías, firma del responsable y confirmación del registro.</p>
+                    <span class="btn-project btn-project-disabled" aria-label="Vista protegida, acceso interactivo desactivado">Vista protegida <i class="fas fa-lock" aria-hidden="true"></i></span>
+                    <a href="proyecto.html?proyecto=alistamiento" class="btn-project">Ver ficha <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
                 </div>
             </div>
         </div>
@@ -134,7 +158,8 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-brand">
-                    <a href="index.html" class="logo">
+                    <a href="index.html" class="logo" aria-label="XaenzWeb, inicio">
+                        <img src="logoXaenzWeb.png" alt="XaenzWeb">
                     </a>
                     <p>Creando experiencias digitales extraordinarias para tu negocio.</p>
                 </div>
@@ -146,13 +171,15 @@
                         <li><a href="portafolio.html">Portafolio</a></li>
                         <li><a href="nosotros.html">Sobre nosotros</a></li>
                         <li><a href="contacto.html">Contacto</a></li>
+                        <li><a href="privacidad.html">Privacidad</a></li>
+                        <li><a href="terminos.html">Términos</a></li>
                     </ul>
                 </div>
                 <div class="footer-social">
                     <h4>Síguenos</h4>
                     <div class="social-links">
-                        <a href="https://www.instagram.com/webxaenz27?igsh=am1wd3poMzBpY3Nm" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="https://github.com/WWW-XAENZ" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="https://www.instagram.com/webxaenz27?igsh=am1wd3poMzBpY3Nm" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://github.com/WWW-XAENZ" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
                         <a href="contacto.html" aria-label="Contacto"><i class="fas fa-envelope"></i></a>
                     </div>
                 </div>
@@ -173,6 +200,9 @@
         </div>
     </footer>
 
+    <a class="whatsapp-float" href="https://wa.me/573102145133?text=Hola%20XaenzWeb,%20quiero%20cotizar%20un%20proyecto" target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp">
+        <i class="fab fa-whatsapp" aria-hidden="true"></i><span>Hablemos</span>
+    </a>
     <script src="script.js"></script>
 </body>
 </html>
