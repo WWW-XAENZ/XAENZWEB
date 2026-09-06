@@ -4,9 +4,9 @@
 
 /* Variables */
 :root {
-    --primary: #6ee7b7;
-    --primary-dark: #2ec98d;
-    --primary-light: #d9fff0;
+    --primary: #38E4AC;
+    --primary-dark: #15945A;
+    --primary-light: #C7FFE7;
     --secondary: #84d8ff;
     --accent: #a7f3d0;
     --dark: #050b0a;
@@ -17,9 +17,9 @@
     --light-secondary: #bfd0cb;
     --muted: #7a8e88;
     --glass-bg: rgba(13, 22, 20, 0.78);
-    --glass-border: rgba(136, 255, 207, 0.12);
-    --gradient-primary: linear-gradient(135deg, #7ef0c9 0%, #36d399 38%, #9fe7ff 100%);
-    --gradient-glow: radial-gradient(circle at center, rgba(54, 211, 153, 0.24) 0%, rgba(133, 216, 255, 0.12) 26%, transparent 72%);
+    --glass-border: rgba(56, 228, 172, 0.12);
+    --gradient-primary: linear-gradient(135deg, #C7FFE7 0%, #38E4AC 48%, #15945A 100%);
+    --gradient-glow: radial-gradient(circle at center, rgba(56, 228, 172, 0.24) 0%, rgba(132, 216, 255, 0.12) 26%, transparent 72%);
     --shadow-glow: 0 10px 30px rgba(7, 16, 14, 0.9), 0 0 0 1px rgba(126, 240, 201, 0.08);
     --radius-sm: 12px;
     --radius-md: 20px;
@@ -2931,9 +2931,9 @@ body .portfolio-info p {
    XAENZ // EDITORIAL TECH SYSTEM
    ============================================= */
 :root {
-    --primary: #5ff0a3;
-    --primary-dark: #15945a;
-    --primary-light: #c7ffdc;
+    --primary: #38E4AC;
+    --primary-dark: #15945A;
+    --primary-light: #C7FFE7;
     --secondary: #8be8b5;
     --accent: #b4ffc9;
     --dark: #06100b;
@@ -2944,9 +2944,9 @@ body .portfolio-info p {
     --light-secondary: #b5cdbd;
     --muted: #718f7d;
     --glass-bg: rgba(16, 37, 26, 0.86);
-    --glass-border: rgba(95, 240, 163, 0.18);
-    --gradient-primary: linear-gradient(100deg, #c7ffdc 0%, #5ff0a3 42%, #15945a 100%);
-    --gradient-glow: radial-gradient(circle at center, rgba(95, 240, 163, 0.16), transparent 68%);
+    --glass-border: rgba(56, 228, 172, 0.18);
+    --gradient-primary: linear-gradient(100deg, #C7FFE7 0%, #38E4AC 42%, #15945A 100%);
+    --gradient-glow: radial-gradient(circle at center, rgba(56, 228, 172, 0.16), transparent 68%);
     --radius-sm: 4px;
     --radius-md: 8px;
     --radius-lg: 12px;
@@ -2957,7 +2957,7 @@ body {
     background:
         linear-gradient(rgba(95, 240, 163, 0.03) 1px, transparent 1px),
         linear-gradient(90deg, rgba(95, 240, 163, 0.03) 1px, transparent 1px),
-        radial-gradient(circle at 70% 4%, rgba(95, 240, 163, 0.14), transparent 26%),
+        radial-gradient(circle at 70% 4%, rgba(56, 228, 172, 0.14), transparent 26%),
         linear-gradient(180deg, #06100b 0%, #0a1911 48%, #06100b 100%);
     background-size: 48px 48px, 48px 48px, auto, auto;
 }
