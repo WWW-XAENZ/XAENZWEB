@@ -466,11 +466,14 @@ function initQuoteCalculator() {
     const formatMoney = value => `$${value.toLocaleString('es-CO')} COP`;
 
     function updateQuote() {
-        const base = Number(type.selectedOptions[0].dataset.base);
+        const selectedType = type.selectedOptions[0];
+        const base = Number(selectedType.dataset.base ?? selectedType.dataset.min);
+        const minimum = Number(selectedType.dataset.min ?? base);
+        const maximum = Number(selectedType.dataset.max ?? Math.round(base * 1.5));
         const scopeExtra = Number(size.selectedOptions[0].dataset.extra);
         const featureExtra = Number(feature.selectedOptions[0].dataset.extra);
-        const estimate = base + scopeExtra + featureExtra;
-        total.textContent = `${formatMoney(estimate)} - ${formatMoney(Math.round(estimate * 1.5))}`;
+        const extras = scopeExtra + featureExtra;
+        total.textContent = `${formatMoney(minimum + extras)} - ${formatMoney(maximum + extras)}`;
     }
 
     [type, size, feature].forEach(select => select.addEventListener('change', updateQuote));

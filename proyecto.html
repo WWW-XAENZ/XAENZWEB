@@ -45,9 +45,10 @@
                 <p id="project-summary"></p>
             </div>
             <div class="project-detail-layout">
-                <div class="project-detail-visual">
+                <figure class="project-detail-visual">
                     <img id="project-image" src="logoXaenzWeb.png" alt="Vista previa del proyecto">
-                </div>
+                    <figcaption id="project-image-caption"></figcaption>
+                </figure>
                 <div class="project-detail-copy">
                     <div class="detail-block">
                         <span class="detail-label">Objetivo</span>
@@ -62,6 +63,7 @@
                         <p id="project-approach"></p>
                     </div>
                     <a class="btn btn-primary" id="project-action" href="contacto.html">Hablemos de tu proyecto <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+                    <a class="btn-project project-live-link" id="project-live-link" target="_blank" rel="noopener noreferrer" hidden>Ver sitio en vivo <i class="fas fa-external-link-alt" aria-hidden="true"></i></a>
                 </div>
             </div>
         </div>
@@ -74,38 +76,49 @@
     <script>
         const projects = {
             gnss: {
-                type: 'Página web corporativa', title: 'Topografía GNSS', image: 'gnss.png',
+                type: 'Página web corporativa', title: 'Topografía GNSS', image: 'preview-gnss.png',
+                url: 'https://www-xaenz.github.io/GNSS/',
                 summary: 'Una presencia digital para una empresa especializada en precisión geográfica y topografía.',
                 objective: 'Presentar servicios técnicos complejos de forma clara y facilitar solicitudes de cotización.',
-                features: ['Georreferenciación y levantamientos', 'Servicios de rectificación, desenglobes y englobe', 'Proyectos realizados y equipos especializados', 'Contacto directo para cotizaciones'],
+                features: ['Secciones de servicios, proyectos realizados y equipos topográficos', 'Formulario de cotización con datos de contacto y servicio solicitado', 'Preparación de la solicitud para enviarla directamente por WhatsApp', 'Enlaces de contacto por WhatsApp y correo electrónico'],
                 approach: 'Jerarquía de información, lenguaje técnico accesible y llamadas a la acción orientadas a proyectos de ingeniería y construcción.'
             },
             purebeauty: {
-                type: 'Tienda online', title: 'Pure Beauty', image: 'purebeauty.png',
+                type: 'Tienda online', title: 'Pure Beauty', image: 'preview-purebeauty.png',
+                url: 'https://www-xaenz.github.io/PUREBEAUTY/',
                 summary: 'Una experiencia de catálogo para maquillaje, cuidado capilar y productos de belleza seleccionados.',
                 objective: 'Organizar el catálogo y convertir la consulta de productos en pedidos directos.',
-                features: ['Productos destacados y categorías', 'Disponibilidad y precios visibles', 'Carrito y pedidos por WhatsApp', 'Contacto y asesoría personalizada'],
+                features: ['Catálogo con marca, precio y existencias de productos', 'Carrito para agregar y gestionar productos', 'Envío del pedido directamente por WhatsApp', 'Panel administrativo para gestionar productos y existencias', 'Módulos de administración de ventas, encargos y deudas de clientes'],
                 approach: 'Diseño cálido, navegación simple y foco visual en los productos para acompañar la decisión de compra.'
             },
             ezentia: {
-                type: 'Comercio electrónico', title: 'Ezentia', image: 'ezentiaPagina.png',
+                type: 'Comercio electrónico', title: 'Ezentia', image: 'preview-ezentia.png',
+                url: 'https://www-xaenz.github.io/EZENTIA/',
                 summary: 'Una tienda de perfumería de lujo para descubrir fragancias originales y comprar en Colombia.',
                 objective: 'Construir una experiencia premium que combine descubrimiento de aromas, confianza y compra.',
-                features: ['Catálogo de fragancias y marcas', 'Notas aromáticas y fichas de producto', 'Carrito y pedidos por WhatsApp', 'Envíos nacionales y garantía de autenticidad'],
+                features: ['Catálogo de fragancias y páginas de producto', 'Carrito con cantidades, productos y total del pedido', 'Finalización del pedido por WhatsApp', 'Panel administrativo para gestionar productos y ventas'],
                 approach: 'Dirección visual elegante, presentación editorial de productos y recorrido de compra directo.'
             },
+            andreacardona: {
+                type: 'Sitio web de portafolio', title: 'Andrea Cardona', image: 'preview-andrea-cardona.png',
+                url: 'https://www-xaenz.github.io/ANDREACARDONA/',
+                summary: 'Un portafolio digital para una diseñadora gráfica independiente enfocada en identidades visuales y piezas gráficas con personalidad.',
+                objective: 'Presentar su identidad, servicios y proyectos en una experiencia clara y coherente con su estilo visual.',
+                features: ['Filtros por categoría y vista ampliada de proyectos', 'Secciones de servicios, perfil y contacto', 'Enlaces directos y formulario que prepara un mensaje para WhatsApp', 'Panel administrativo para editar contenido, proyectos, servicios y testimonios'],
+                approach: 'Estética contemporánea y oscura, tipografía expresiva y una narrativa centrada en conceptos visuales con carácter.'
+            },
             si3: {
-                type: 'Software operativo', title: 'SI-3 Sistema de Turnos', image: 'SI3.png',
+                type: 'Software operativo', title: 'SI-3 Sistema de Turnos', image: 'preview-si3-turnos.png',
                 summary: 'Una herramienta para organizar la atención de proveedores y mostrar los turnos en pantalla.',
                 objective: 'Reducir fricción en la atención mediante un flujo claro de registro, solicitud y consulta.',
-                features: ['Registro de proveedores', 'Solicitud y consulta de turnos', 'Vista para pantalla TV', 'Información institucional y de contacto'],
+                features: ['Solicitud de turno con empresa, vehículo, contacto, servicio y cita', 'Registro de materiales y datos de ingreso cuando aplican', 'Consulta del turno y estado de la fila de espera', 'Vista de turnos para pantalla de recepción', 'Panel de recepción para gestionar la atención e historial de turnos'],
                 approach: 'Interfaz funcional y directa, diseñada para que cada usuario entienda el siguiente paso sin capacitación extensa.'
             },
             alistamiento: {
-                type: 'Software interno', title: 'Alistamiento SI-3', image: 'SI3.png',
+                type: 'Software interno', title: 'Alistamiento SI-3', image: 'preview-alistamiento-si3.png',
                 summary: 'Un módulo de registro para documentar el alistamiento de pedidos y dejar trazabilidad del proceso.',
                 objective: 'Centralizar la información del alistamiento en un registro verificable y fácil de consultar.',
-                features: ['Fecha, turno y referencia', 'Control de base, fomi, forro y componentes', 'Registro fotográfico', 'Firma del responsable y confirmación'],
+                features: ['Registro de fecha, turno, referencia, materiales y responsable', 'Captura o carga de fotografías como evidencia', 'Firma en pantalla y confirmación del registro', 'Formulario de trazabilidad con cantidad, novedades y fotos', 'Panel administrativo para filtrar registros y exportar a Excel'],
                 approach: 'Flujo operativo compacto para capturar evidencia y completar cada registro desde una sola pantalla.'
             }
         };
@@ -119,7 +132,13 @@
         document.getElementById('project-objective').textContent = project.objective;
         document.getElementById('project-approach').textContent = project.approach;
         document.getElementById('project-image').src = project.image;
-        document.getElementById('project-image').alt = `Vista previa de ${project.title}`;
+        document.getElementById('project-image').alt = `Captura de pantalla de ${project.title}`;
+        document.getElementById('project-image-caption').textContent = project.url ? 'Vista real del sitio publicado' : 'Vista del sistema';
+        const liveLink = document.getElementById('project-live-link');
+        if (project.url) {
+            liveLink.href = project.url;
+            liveLink.hidden = false;
+        }
         document.getElementById('project-features').innerHTML = project.features.map(feature => `<li><i class="fas fa-check" aria-hidden="true"></i>${feature}</li>`).join('');
     </script>
 </body>
